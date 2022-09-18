@@ -1,22 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Simple from './Simple';
 // import Expressions from './Expressions';
 // import Conditionals from './Conditionals';
 // import Events from './Events';
-import ConditionalsIF from './ConditionalsIF';
+//import ConditionalsIF from './ConditionalsIF';
+// import MapExample from './MapExample';
+import ConditionalsIfSeveralComponents from './ConditionalsIfSeveralComponents';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <Simple/>
     <Expressions/>
     <Conditionals/> */}
     {/* <Events/> */}
-    <ConditionalsIF/>
+    {/* <ConditionalsIF/> */}
+    {/* <MapExample/> */}
+    <ConditionalsIfSeveralComponents/>
   </React.StrictMode>
 );
 
