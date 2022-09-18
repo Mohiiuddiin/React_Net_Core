@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// import Simple from './Simple';
+// import Expressions from './Expressions';
+// import Conditionals from './Conditionals';
+// import Events from './Events';
+import ConditionalsIF from './ConditionalsIF';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    {/* <Simple/>
+    <Expressions/>
+    <Conditionals/> */}
+    {/* <Events/> */}
+    <ConditionalsIF/>
   </React.StrictMode>
 );
 
