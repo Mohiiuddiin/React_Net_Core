@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SelectNumber(props:selectNumberProps){
     const arr = Array(props.maxValue).fill(0);
     return (
@@ -7,7 +9,9 @@ export default function SelectNumber(props:selectNumberProps){
                 //setSelectedRate(parseInt(e.currentTarget.value,10))
                 props.onSelected(parseInt(e.currentTarget.value,10))
             }}>
-                {arr.map((_,index)=><option key={index+1} value={index+1}>{index+1}</option>)}
+                {/* {arr.map((_,index)=><option key={index+1} value={index+1}>{index+1}</option>)} */}
+                {arr.map((_,index)=><option key={index+1} value={index+1}>{props.selectContent(index+1)}</option>)}
+
             </select>
         </>
     )
@@ -16,6 +20,7 @@ export default function SelectNumber(props:selectNumberProps){
 interface selectNumberProps{ 
     maxValue : number;
     onSelected(value:number):void;
+    selectContent(value:number):React.ReactNode;
 }
 
 SelectNumber.defaultProps = {
