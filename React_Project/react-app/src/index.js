@@ -9,7 +9,8 @@ import reportWebVitals from './reportWebVitals';
 // import Events from './Events';
 //import ConditionalsIF from './ConditionalsIF';
 // import MapExample from './MapExample';
-import ConditionalsIfSeveralComponents from './ConditionalsIfSeveralComponents';
+// import ConditionalsIfSeveralComponents from './ConditionalsIfSeveralComponents';
+import CSSExample from './CSSExamples';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +22,8 @@ root.render(
     {/* <Events/> */}
     {/* <ConditionalsIF/> */}
     {/* <MapExample/> */}
-    <ConditionalsIfSeveralComponents/>
+    {/* <ConditionalsIfSeveralComponents/> */}
+    <CSSExample></CSSExample>
   </React.StrictMode>
 );
 
