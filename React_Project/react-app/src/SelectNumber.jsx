@@ -13,7 +13,11 @@ export default function SelectNumber(props:selectNumberProps){
     )
 }
 
-interface selectNumberProps{
+interface selectNumberProps{ 
     maxValue : number;
     onSelected(value:number):void;
+}
+
+SelectNumber.defaultProps = {
+    maxValue : 5
 }

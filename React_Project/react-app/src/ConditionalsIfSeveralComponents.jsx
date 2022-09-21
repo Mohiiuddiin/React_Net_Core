@@ -28,7 +28,10 @@ export default function ConditionalsIfSeveralComponents(){
     return (
         <>
         <div>Rate this website</div>
-            <SelectNumber maxValue={10} onSelected={setSelectedRate}/>
+        {/* <SelectNumber maxValue={10} onSelected={setSelectedRate}/> */}
+
+        <SelectNumber onSelected={setSelectedRate}/>
+
             <div>
                 {displayResult()}
             </div>
