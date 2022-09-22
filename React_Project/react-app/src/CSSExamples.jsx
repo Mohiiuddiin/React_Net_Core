@@ -10,8 +10,8 @@ export default function CSSExample(){
         height:'50px',
         width:'50px',
         marginLeft:'1rem'
-
     }
+    
     return (
         <>
             <h1 className="red">CSS Example</h1>

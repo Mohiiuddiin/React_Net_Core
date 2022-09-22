@@ -22,8 +22,7 @@ export default function ConditionalsIfSeveralComponents(){
             return <><Simple/></>
             
         }else{ 
-            <span>Thanks!</span>
-            
+            <span>Thanks!</span>            
         }
     }
     return (
@@ -34,7 +33,6 @@ export default function ConditionalsIfSeveralComponents(){
         <SelectNumber selectContent={(value) =>`Select ${value}`} 
          maxValue={10}  
          onSelected={setSelectedRate}/>
-
             <div>
                 {displayResult()}
             </div>
@@ -45,6 +43,7 @@ export default function ConditionalsIfSeveralComponents(){
                         <Simple></Simple>
                     </>
                 </ProjectContent>
+                
             </div>
         </>
     )
