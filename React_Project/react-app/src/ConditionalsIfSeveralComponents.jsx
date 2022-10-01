@@ -19,8 +19,7 @@ export default function ConditionalsIfSeveralComponents(){
                 </>
             )
         }else if(selectedRate===3){
-            return <><Simple/></>
-            
+            return <><Simple/></>            
         }else{ 
             <span>Thanks!</span>            
         }
@@ -41,9 +40,10 @@ export default function ConditionalsIfSeveralComponents(){
                     <>
                         <button onClick={()=> console.log('I was clicked')}>This is a button as a parameter</button>
                         <Simple></Simple>
+                        {/* <Simple></Simple> */}
+
                     </>
-                </ProjectContent>
-                
+                </ProjectContent>                
             </div>
         </>
     )
