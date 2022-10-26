@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import './App.css';
 // import IndividualMovie from './movies/IndividualMovie';
 // import DisplayGrade from './DisplayGrade';
@@ -7,7 +7,7 @@ import './App.css';
 // import ValueContext from './ValueContext';
 // import ErrorBoundary from './ErrorBoundary';
 import MoviesList from './movies/MoviesList';
-import { landingpageDTO } from './movies/movies.model.d';
+// import { landingpageDTO } from './movies/movies.model.d';
 
 function App() {
   // const [hide, setHide] = useState(false); 
@@ -18,9 +18,9 @@ function App() {
   //   title:'React JS',
   //   poster:'https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png'
   // }
-  const [movies,setMovies] = useState<landingpageDTO>({});
+  const [movies,setMovies] = useState({});
 useEffect(()=>{
-  const timerId = setTimeout(()=>{ 
+  const timerId = setTimeout(()=>{
     setMovies({
       inThreaters:[
         {
@@ -48,7 +48,6 @@ useEffect(()=>{
       ]
     })
   },1000);
-
   return () => clearTimeout(timerId);
 })
 

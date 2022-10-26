@@ -7,17 +7,17 @@ export default function MoviesList(props:moviesListProps){
     }else if(props.movies.length === 0){
         return <>There are no movies to display.</>
     }else{
-
+        return(
+            <div className={css.div}>
+                {
+                    props.movies.map(
+                        movie=><IndividualMovie {...movie} key={movie.id}/>
+                    )
+                }
+            </div>
+        )
     }
-    return(
-        <div className={css.div}>
-            {
-                props.movies.map(
-                    movie=><IndividualMovie {...movie} key={movie.id}/>
-                )
-            }
-        </div>
-    )
+    
 }
 
 interface moviesListProps{
