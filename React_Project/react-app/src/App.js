@@ -6,44 +6,77 @@ import './App.css';
 // import UseEffectExamples from './UseEffectExamples';
 // import ValueContext from './ValueContext';
 // import ErrorBoundary from './ErrorBoundary';
-import {movieDTO} from './movies/movies.model.d'
 import MoviesList from './movies/MoviesList';
+import { landingpageDTO } from './movies/movies.model.d';
 
 function App() {
   // const [hide, setHide] = useState(false); 
   // const grades = [95,75,-5,55];
-
+ 
   // const testMovie: movieDTO = {
   //   id:1,
   //   title:'React JS',
   //   poster:'https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png'
   // }
+  const [movies,setMovies] = useState<landingpageDTO>({});
+useEffect(()=>{
+  const timerId = setTimeout(()=>{ 
+    setMovies({
+      inThreaters:[
+        {
+          id:1,
+          title:'React JS',
+          poster:'https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png'
+        },
+        {
+          id:2,
+          title:'Angular',
+          poster:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'
+        }
+      ],
+      upcomingReleases:[
+        {
+          id:1,
+          title:'React Native',
+          poster:'https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png'
+        },
+        {
+          id:2,
+          title:'Angular',
+          poster:'https://res.cloudinary.com/practicaldev/image/fetch/s--I4FWon9Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ll22z8mea106b4vjdjy7.jpeg'
+        }
+      ]
+    })
+  },1000);
 
-  const inThreaters: movieDTO[] = [
-    {
-      id:1,
-      title:'React JS',
-      poster:'https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png'
-    },
-    {
-      id:2,
-      title:'Angular',
-      poster:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'
-    }
-  ];
+  return () => clearTimeout(timerId);
+})
 
-  const upcomingReleases: movieDTO[] = [
-    {
-      id:1,
-      title:'React Native',
-      poster:'https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png'
-    },
-    {
-      id:2,
-      title:'Angular',
-      poster:'https://res.cloudinary.com/practicaldev/image/fetch/s--I4FWon9Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ll22z8mea106b4vjdjy7.jpeg'
-    }
-  ];
+  // const inThreaters: movieDTO[] = [
+  //   {
+  //     id:1,
+  //     title:'React JS',
+  //     poster:'https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png'
+  //   },
+  //   {
+  //     id:2,
+  //     title:'Angular',
+  //     poster:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'
+  //   }
+  // ];
+
+  // const upcomingReleases: movieDTO[] = [
+  //   {
+  //     id:1,
+  //     title:'React Native',
+  //     poster:'https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png'
+  //   },
+  //   {
+  //     id:2,
+  //     title:'Angular',
+  //     poster:'https://res.cloudinary.com/practicaldev/image/fetch/s--I4FWon9Y--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ll22z8mea106b4vjdjy7.jpeg'
+  //   }
+  // ];
   return (
     <>
       {
@@ -68,9 +101,9 @@ function App() {
       {/* <IndividualMovie {...testMovie} /> */}
 
       <h3>In Treaters</h3>
-      <MoviesList movies={inThreaters}/>
+      <MoviesList movies={movies.inThreaters}/>
       <h3>Upcoming Releases</h3>
-      <MoviesList movies={upcomingReleases}/>
+      <MoviesList movies={movies.upcomingReleases}/>
     </>
   )
 

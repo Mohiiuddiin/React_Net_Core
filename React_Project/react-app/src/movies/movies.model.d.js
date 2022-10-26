@@ -3,3 +3,8 @@ export interface movieDTO{
     title:String;
     poster:string;
 }
+
+export interface landingpageDTO{
+    inThreaters?:movieDTO[];
+    upcomingReleases?:movieDTO[];
+}
